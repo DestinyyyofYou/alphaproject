@@ -64,7 +64,7 @@
     height: 7.6875rem;
 }
 
-.center_runnerBorder_border {
+.center_runner_Border_border {
     position: absolute;
     top: 0.5rem;
     left: 0.25rem;
@@ -243,7 +243,7 @@
     height: 7.6875rem;
 }
 
-.center_tankBorder_border {
+.center_tank_Border_border {
     position: absolute;
     top: 0.5rem;
     left: 0.25rem;
@@ -423,7 +423,7 @@
     height: 7.6875rem;
 }
 
-.center_LightweightBorder_border {
+.center_Lightweight_Border_border {
     position: absolute;
     top: 0.5rem;
     left: 0.25rem;
@@ -755,19 +755,19 @@
     color: #FF2100;
 }
 
-.center_runner:hover .center_runnerBorder_border {
+.center_runner:hover .center_runner_Border_border {
     transition-duration: 0.3s;
     border: 1px solid #FF2100;
     background: #570A0A;
 }
 
-.center_tank:hover .center_tankBorder_border {
+.center_tank:hover .center_tank_Border_border {
     transition-duration: 0.3s;
     border: 1px solid #FF2100;
     background: #570A0A;
 }
 
-.center_Lightweight:hover .center_LightweightBorder_border {
+.center_Lightweight:hover .center_Lightweight_Border_border {
     transition-duration: 0.3s;
     border: 1px solid #FF2100;
     background: #570A0A;

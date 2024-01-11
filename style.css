@@ -2,22 +2,28 @@
 
 * {
     margin: 0;
+    font-size: 0.8333333333333334vw;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .container {
-    width: 120rem;
-    height: 67.5rem;
-    background: url(./assets/imgs/bg\ 1.png), linear-gradient(270deg, rgba(0, 0, 0, 0.90) 0%, rgba(35, 12, 12, 0.43) 57.24%, rgba(211, 45, 45, 0.00) 100%);
-
+    position: absolute;
+    width: 100%;
+    height:  100%;
+    background: url(./assets/imgs/background.png), linear-gradient(270deg, rgba(0, 0, 0, 0.90) 0%, rgba(35, 12, 12, 0.43) 57.24%, rgba(211, 45, 45, 0.00) 100%);
+    background-size: cover;
+    overflow: hidden;
 }
 
 .header_icon {
     width: 19.5625rem;
     height: 19.5625rem;
-    background: url(./assets/imgs/alpha.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/alpha.png);
     position: absolute;
     top: 1.44rem;
     left: 15.44rem;
+    background-size: cover;
 }
 
 .header_tittle {
@@ -74,7 +80,8 @@
     left: 1.12rem;
     width: 4rem;
     height: 4rem;
-    background: url(./assets/imgs/runner1.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Runner.png);
+    background-size: cover;
     transition: background-image 0.3s ease;
 }
 
@@ -252,7 +259,8 @@
     left: 1.12rem;
     width: 4rem;
     height: 4rem;
-    background: url(./assets/imgs/security1.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Security.png);
+    background-size: cover;
 }
 
 .center_tank_Border_borderBorderkKey {
@@ -431,7 +439,8 @@
     left: 1.12rem;
     width: 4rem;
     height: 4rem;
-    background: url(./assets/imgs/storm1.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Storm.png);
+    background-size: cover;
 }
 
 .center_Lightweight_Border_borderBorderkKey {
@@ -599,6 +608,7 @@
     height: 1.1875rem;
     fill: #5D5D5D;
     background: url(./assets/imgs/Union.png);
+    background-size: cover;
 }
 
 .footer_rectangleText_text {
@@ -628,7 +638,8 @@
     left: 0.37rem;
     width: 1.875rem;
     height: 1.875rem;
-    background: url(./assets/imgs/Done.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Done.png);
+    background-size: cover;
     transition: background-image 0.3s ease;
     transition: top;
     transition-duration: 0.35s;
@@ -650,7 +661,8 @@
     left: 0.06rem;
     width: 2.5rem;
     height: 2.5rem;
-    background: url(./assets/imgs/Multiply.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Multiply.png);
+    background-size: cover;
     transition: background-image 0.3s ease;
     transition: left;
     transition-duration: 0.35s;
@@ -713,6 +725,7 @@
     font-weight: 900;
 }
 
+<<<<<<< HEAD
 .center_runner:hover .center_runner_Border_borderIcon {
     background: url(./assets/imgs/runner.png);
 }
@@ -723,6 +736,21 @@
 
 .center_Lightweight:hover .center_Lightweight_Border_borderIcon {
     background: url(./assets/imgs/stormred.png);
+=======
+.center_runner:hover .center_runnerBorder_borderIcon {
+    background: url(./assets/imgs/Runner_Hover.png);
+    background-size: cover;
+}
+
+.center_tank:hover .center_tankBorder_borderIcon {
+    background: url(./assets/imgs/Security_Hover.png);
+    background-size: cover;
+}
+
+.center_Lightweight:hover .center_LightweightBorder_borderIcon {
+    background: url(./assets/imgs/Storm_Hover.png);
+    background-size: cover;
+>>>>>>> cd69fd9e32e90707e4602e63409ac6c196899b29
 }
 
 .center_runner:hover .center_runner_Text {
@@ -775,7 +803,8 @@
 
 
 .footer_rectangleAccept:hover .footer_rectangleAccept_icon {
-    background: url(./assets/imgs/Donered.png);
+    background: url(./assets/imgs/Done_Hover.png);
+    background-size: cover;
     top: 0.45rem;
 }
 
@@ -784,7 +813,8 @@
 }
 
 .footer_rectangleDecline:hover .footer_rectangleDecline_icon {
-    background: url(./assets/imgs/Multiplyred.png);
+    background: url(./assets/imgs/Multiply_Hover.png);
+    background-size: cover;
     left: 0.32rem;
 }
 

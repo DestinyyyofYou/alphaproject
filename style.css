@@ -74,7 +74,7 @@
     background: #252525;
 }
 
-.center_runnerBorder_borderIcon {
+.center_runner_Border_borderIcon {
     position: absolute;
     top: 1.13rem;
     left: 1.12rem;
@@ -85,7 +85,7 @@
     transition: background-image 0.3s ease;
 }
 
-.center_runnerBorder_borderBorderkKey {
+.center_runner_Border_borderBorderkKey {
     position: absolute;
     top: 5.6rem;
     left: 2.31rem;
@@ -94,7 +94,7 @@
     background: #2D2D2D;
 }
 
-.center_runnerBorder_borderBorderkKey_text {
+.center_runner_Border_borderBorderkKey_text {
     position: absolute;
     top: -0.3rem;
     left: 0.5rem;
@@ -104,7 +104,7 @@
     font-weight: 500;
 }
 
-.center_runnerBorder_borderTopLeft {
+.center_runner_Border_borderTopLeft {
     position: absolute;
     top: -0.5rem;
     left: -0.35rem;
@@ -114,7 +114,7 @@
     stroke: #FFF;
 }
 
-.center_runnerBorder_borderBottomRight {
+.center_runner_Border_borderBottomRight {
     position: absolute;
     top: 5.65rem;
     left: 5.85rem;
@@ -124,7 +124,7 @@
     stroke: #FFF;
 }
 
-.center_runnerBorder_borderLeftRectangle {
+.center_runner_Border_borderLeftRectangle {
     position: absolute;
     top: 1.81rem;
     left: -0.24rem;
@@ -253,7 +253,7 @@
     background: #252525;
 }
 
-.center_tankBorder_borderIcon {
+.center_tank_Border_borderIcon {
     position: absolute;
     top: 1.13rem;
     left: 1.12rem;
@@ -263,7 +263,7 @@
     background-size: cover;
 }
 
-.center_tankBorder_borderBorderkKey {
+.center_tank_Border_borderBorderkKey {
     position: absolute;
     top: 5.6rem;
     left: 2.31rem;
@@ -272,7 +272,7 @@
     background: #2D2D2D;
 }
 
-.center_tankBorder_borderBorderkKey_text {
+.center_tank_Border_borderBorderkKey_text {
     position: absolute;
     top: -0.3rem;
     left: 0.5rem;
@@ -282,7 +282,7 @@
     font-weight: 500;
 }
 
-.center_tankBorder_borderTopLeft {
+.center_tank_Border_borderTopLeft {
     position: absolute;
     top: -0.5rem;
     left: -0.35rem;
@@ -292,7 +292,7 @@
     stroke: #FFF;
 }
 
-.center_tankBorder_borderBottomRight {
+.center_tank_Border_borderBottomRight {
     position: absolute;
     top: 5.65rem;
     left: 5.85rem;
@@ -302,7 +302,7 @@
     stroke: #FFF;
 }
 
-.center_tankBorder_borderLeftRectangle {
+.center_tank_Border_borderLeftRectangle {
     position: absolute;
     top: 1.81rem;
     left: -0.24rem;
@@ -433,7 +433,7 @@
     background: #252525;
 }
 
-.center_LightweightBorder_borderIcon {
+.center_Lightweight_Border_borderIcon {
     position: absolute;
     top: 1.13rem;
     left: 1.12rem;
@@ -443,7 +443,7 @@
     background-size: cover;
 }
 
-.center_LightweightBorder_borderBorderkKey {
+.center_Lightweight_Border_borderBorderkKey {
     position: absolute;
     top: 5.6rem;
     left: 2.31rem;
@@ -452,7 +452,7 @@
     background: #2D2D2D;
 }
 
-.center_LightweightBorder_borderBorderkKey_text {
+.center_Lightweight_Border_borderBorderkKey_text {
     position: absolute;
     top: -0.3rem;
     left: 0.5rem;
@@ -462,7 +462,7 @@
     font-weight: 500;
 }
 
-.center_LightweightBorder_borderTopLeft {
+.center_Lightweight_Border_borderTopLeft {
     position: absolute;
     top: -0.5rem;
     left: -0.35rem;
@@ -472,7 +472,7 @@
     stroke: #FFF;
 }
 
-.center_LightweightBorder_borderBottomRight {
+.center_Lightweight_Border_borderBottomRight {
     position: absolute;
     top: 5.65rem;
     left: 5.85rem;
@@ -482,7 +482,7 @@
     stroke: #FFF;
 }
 
-.center_LightweightBorder_borderLeftRectangle {
+.center_Lightweight_Border_borderLeftRectangle {
     position: absolute;
     top: 1.81rem;
     left: -0.24rem;
@@ -668,21 +668,21 @@
     transition-duration: 0.35s;
 }
 
-.center_runner:hover .center_runnerBorder_borderLeftRectangle, .center_runner:hover .center_runnerBorder_thinLine,
+.center_runner:hover .center_runner_Border_borderLeftRectangle, .center_runner:hover .center_runnerBorder_thinLine,
 .center_runner:hover .center_runnerBorder_thickLine, .center_runner:hover .center_runner_RectangleSpeedEmpty_insert,
 .center_runner:hover .center_runner_RectangleHealthEmpty_insert {
     transition-duration: 0.3s;
     background: #FF2100;
 }
 
-.center_tank:hover .center_tankBorder_borderLeftRectangle, .center_tank:hover .center_tankBorder_thinLine,
+.center_tank:hover .center_tank_Border_borderLeftRectangle, .center_tank:hover .center_tankBorder_thinLine,
 .center_tank:hover .center_tankBorder_thickLine, .center_tank:hover .center_tank_RectangleSpeedEmpty_insert,
 .center_tank:hover .center_tank_RectangleHealthEmpty_insert {
     transition-duration: 0.3s;
     background: #FF2100;
 }
 
-.center_Lightweight:hover .center_LightweightBorder_borderLeftRectangle, .center_Lightweight:hover .center_LightweightBorder_thinLine,
+.center_Lightweight:hover .center_Lightweight_Border_borderLeftRectangle, .center_Lightweight:hover .center_LightweightBorder_thinLine,
 .center_Lightweight:hover .center_LightweightBorder_thickLine, .center_Lightweight:hover .center_Lightweight_RectangleSpeedEmpty_insert,
 .center_Lightweight:hover .center_Lightweight_RectangleHealthEmpty_insert {
     transition-duration: 0.3s;
@@ -725,17 +725,17 @@
     font-weight: 900;
 }
 
-.center_runner:hover .center_runnerBorder_borderIcon {
+.center_runner:hover .center_runner_Border_borderIcon {
     background: url(./assets/imgs/Runner_Hover.png);
     background-size: cover;
 }
 
-.center_tank:hover .center_tankBorder_borderIcon {
+.center_tank:hover .center_tank_Border_borderIcon {
     background: url(./assets/imgs/Security_Hover.png);
     background-size: cover;
 }
 
-.center_Lightweight:hover .center_LightweightBorder_borderIcon {
+.center_Lightweight:hover .center_Lightweight_Border_borderIcon {
     background: url(./assets/imgs/Storm_Hover.png);
     background-size: cover;
 }
@@ -773,17 +773,17 @@
     background: #570A0A;
 }
 
-.center_runner:hover .center_runnerBorder_borderBorderkKey {
+.center_runner:hover .center_runner_Border_borderBorderkKey {
     transition-duration: 0.3s;
     background: #931717;
 }
 
-.center_tank:hover .center_tankBorder_borderBorderkKey {
+.center_tank:hover .center_tank_Border_borderBorderkKey {
     transition-duration: 0.3s;
     background: #931717;
 }
 
-.center_Lightweight:hover .center_LightweightBorder_borderBorderkKey {
+.center_Lightweight:hover .center_Lightweight_Border_borderBorderkKey {
     transition-duration: 0.3s;
     background: #931717;
 }
@@ -802,7 +802,6 @@
 .footer_rectangleDecline:hover .footer_rectangleDecline_icon {
     background: url(./assets/imgs/Multiply_Hover.png);
     background-size: cover;
-    left: 0.32rem;
 }
 
 .footer_rectangleDecline:hover {

@@ -13,16 +13,16 @@ const runnerHandler = () => {
             $(this).removeClass('hovered');
         }
     );
-    $('.center_runner').one('click',function () {
+    // đang lỗi phần event
+    $('.center_runner').one('click', function () {
         $(this).toggleClass('clicked');
         console.log('a');
     })
-    $('.center_runner').keyup(function (event) {
+    $('.center_runner').one('keypress', (event) => {
         if (event.key === 'r') {
             $(this).toggleClass('clicked');
         }
-    });
-    // alert('Runner clicked');
+    })
 };
 const tankHandler = () => {
     $('.center_tank').hover(
@@ -33,10 +33,14 @@ const tankHandler = () => {
             $(this).removeClass('hovered');
         }
     );
-    $('.center_tank').click(function () {
+    $('.center_tank').one('click', function () {
         $(this).toggleClass('clicked');
-        alert('Tank clicked');
     })
+    $('.center_tank').keyup(function (event) {
+        if (event.key === 't') {
+            $(this).toggleClass('clicked');
+        }
+    });
 };
 const lightHandler = () => {
     $('.center_Lightweight').hover(
@@ -47,10 +51,14 @@ const lightHandler = () => {
             $(this).removeClass('hovered');
         }
     );
-    $('.center_Lightweight').click(function () {
+    $('.center_Lightweight').one('click', function () {
         $(this).toggleClass('clicked');
-        alert('Lightweight clicked');
     })
+    $('.center_Lightweight').keyup(function (event) {
+        if (event.key === 'l') {
+            $(this).toggleClass('clicked');
+        }
+    });
 };
 runnerButton.addEventListener("click", () => {
     runnerHandler();

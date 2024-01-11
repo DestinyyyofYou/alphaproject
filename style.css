@@ -626,8 +626,8 @@
     position: absolute;
     top: 0.37rem;
     left: 0.37rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
     background: url(./assets/imgs/Done.png), 50% / cover no-repeat;
     transition: background-image 0.3s ease;
     transition: top;
@@ -716,12 +716,15 @@
 .center_runner:hover .center_runnerBorder_borderIcon {
     background: url(./assets/imgs/runner.png);
 }
+
 .center_tank:hover .center_tankBorder_borderIcon {
     background: url(./assets/imgs/securityred.png);
 }
+
 .center_Lightweight:hover .center_LightweightBorder_borderIcon {
     background: url(./assets/imgs/stormred.png);
 }
+
 .center_runner:hover .center_runner_Text {
     transition-duration: 0.3s;
     color: #FF2100;

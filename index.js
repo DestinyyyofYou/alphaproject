@@ -5,46 +5,83 @@ const acceptButton = document.querySelector(".footer_rectangleAccept");
 const declineButton = document.querySelector(".footer_rectangleDecline");
 
 const runnerHandler = () => {
-  alert("Click runner");
+    alert("Click runner");
 };
 const tankHandler = () => {
-  alert("Click tank");
+    alert("Click tank");
 };
 const lightHandler = () => {
-  alert("Click light");
+    alert("Click light");
 };
 runnerButton.addEventListener("click", () => {
-  runnerHandler();
+    runnerHandler();
 });
 
 tankButton.addEventListener("click", () => {
-  tankHandler();
+    tankHandler();
 });
 
 lightButton.addEventListener("click", () => {
-  lightHandler();
+    lightHandler();
 });
 
 acceptButton.addEventListener("click", () => {
-  alert("Click accept");
+    alert("Click accept");
 });
 
 declineButton.addEventListener("click", () => {
-  alert("Click decline");
+    alert("Click decline");
 });
 
 window.addEventListener("keyup", (event) => {
-  switch (event.key) {
-    case "r":
-      runnerHandler();
-      break;
-    case "t":
-      tankHandler();
-      break;
-    case "l":
-      lightHandler();
-      break;
-    default:
-      break;
-  }
+    switch (event.key) {
+        case "r":
+            runnerHandler();
+            break;
+        case "t":
+            tankHandler();
+            break;
+        case "l":
+            lightHandler();
+            break;
+        default:
+            break;
+    }
 });
+
+$('.center_runner').hover(
+    function () {
+        $(this).addClass('hovered');
+    },
+    function () {
+        $(this).removeClass('hovered');
+    }
+);
+$('.center_runner').click(function () {
+    $(this).toggleClass('clicked');
+    alert('Runner clicked');
+})
+$('.center_tank').hover(
+    function () {
+        $(this).addClass('hovered');
+    },
+    function () {
+        $(this).removeClass('hovered');
+    }
+);
+$('.center_tank').click(function () {
+    $(this).toggleClass('clicked');
+    alert('Tank clicked');
+})
+$('.center_Lightweight').hover(
+    function () {
+        $(this).addClass('hovered');
+    },
+    function () {
+        $(this).removeClass('hovered');
+    }
+);
+$('.center_Lightweight').click(function () {
+    $(this).toggleClass('clicked');
+    alert('Lightweight clicked');
+})

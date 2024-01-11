@@ -7,7 +7,7 @@
 .container {
     width: 120rem;
     height: 67.5rem;
-    background: url(./assets/imgs/bg\ 1.png), linear-gradient(270deg, rgba(0, 0, 0, 0.90) 0%, rgba(35, 12, 12, 0.43) 57.24%, rgba(211, 45, 45, 0.00) 100%);
+    background: url(./assets/imgs/background.png), linear-gradient(270deg, rgba(0, 0, 0, 0.90) 0%, rgba(35, 12, 12, 0.43) 57.24%, rgba(211, 45, 45, 0.00) 100%);
 
 }
 
@@ -74,7 +74,7 @@
     left: 1.12rem;
     width: 4rem;
     height: 4rem;
-    background: url(./assets/imgs/runner1.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Runner.png), 50% / cover no-repeat;
     transition: background-image 0.3s ease;
 }
 
@@ -252,7 +252,7 @@
     left: 1.12rem;
     width: 4rem;
     height: 4rem;
-    background: url(./assets/imgs/security1.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Security.png), 50% / cover no-repeat;
 }
 
 .center_tankBorder_borderBorderkKey {
@@ -431,7 +431,7 @@
     left: 1.12rem;
     width: 4rem;
     height: 4rem;
-    background: url(./assets/imgs/storm1.png), 50% / cover no-repeat;
+    background: url(./assets/imgs/Storm.png), 50% / cover no-repeat;
 }
 
 .center_LightweightBorder_borderBorderkKey {
@@ -714,15 +714,15 @@
 }
 
 .center_runner:hover .center_runnerBorder_borderIcon {
-    background: url(./assets/imgs/runner.png);
+    background: url(./assets/imgs/Runner_Hover.png);
 }
 
 .center_tank:hover .center_tankBorder_borderIcon {
-    background: url(./assets/imgs/securityred.png);
+    background: url(./assets/imgs/Security_Hover.png);
 }
 
 .center_Lightweight:hover .center_LightweightBorder_borderIcon {
-    background: url(./assets/imgs/stormred.png);
+    background: url(./assets/imgs/Storm_Hover.png);
 }
 
 .center_runner:hover .center_runner_Text {
@@ -775,7 +775,7 @@
 
 
 .footer_rectangleAccept:hover .footer_rectangleAccept_icon {
-    background: url(./assets/imgs/Donered.png);
+    background: url(./assets/imgs/Done_Hover.png);
     top: 0.45rem;
 }
 
@@ -784,7 +784,7 @@
 }
 
 .footer_rectangleDecline:hover .footer_rectangleDecline_icon {
-    background: url(./assets/imgs/Multiplyred.png);
+    background: url(./assets/imgs/Multiply_Hover.png);
     left: 0.32rem;
 }
 

@@ -75,6 +75,7 @@
     width: 4rem;
     height: 4rem;
     background: url(./assets/imgs/runner1.png), 50% / cover no-repeat;
+    transition: background-image 0.3s ease;
 }
 
 .center_runnerBorder_borderBorderkKey {
@@ -119,7 +120,7 @@
 .center_runnerBorder_borderLeftRectangle {
     position: absolute;
     top: 1.81rem;
-    left: -0.19rem;
+    left: -0.24rem;
     width: 0.375rem;
     height: 2.5625rem;
     background: #484848;
@@ -149,7 +150,7 @@
     color: #939393;
     font-family: Khand;
     font-size: 1.5625rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_runner_RectangleSpeedEmpty {
@@ -190,7 +191,7 @@
     text-align: right;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_runner_SpeedElements_insert {
@@ -200,7 +201,7 @@
     color: #B05555;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_runner_HealthElements {
@@ -211,7 +212,7 @@
     text-align: right;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_runner_HealthElements_insert {
@@ -221,7 +222,7 @@
     color: #B05555;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 
@@ -296,7 +297,7 @@
 .center_tankBorder_borderLeftRectangle {
     position: absolute;
     top: 1.81rem;
-    left: -0.19rem;
+    left: -0.24rem;
     width: 0.375rem;
     height: 2.5625rem;
     background: #484848;
@@ -326,7 +327,7 @@
     color: #939393;
     font-family: Khand;
     font-size: 1.5625rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_tank_RectangleSpeedEmpty {
@@ -367,7 +368,7 @@
     text-align: right;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_tank_SpeedElements_insert {
@@ -377,7 +378,7 @@
     color: #B05555;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_tank_HealthElements {
@@ -388,7 +389,7 @@
     text-align: right;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_tank_HealthElements_insert {
@@ -398,7 +399,7 @@
     color: #B05555;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 
@@ -475,7 +476,7 @@
 .center_LightweightBorder_borderLeftRectangle {
     position: absolute;
     top: 1.81rem;
-    left: -0.19rem;
+    left: -0.24rem;
     width: 0.375rem;
     height: 2.5625rem;
     background: #484848;
@@ -505,7 +506,7 @@
     color: #939393;
     font-family: Khand;
     font-size: 1.5625rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_Lightweight_RectangleSpeedEmpty {
@@ -546,7 +547,7 @@
     text-align: right;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_Lightweight_SpeedElements_insert {
@@ -556,7 +557,7 @@
     color: #B05555;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_Lightweight_HealthElements {
@@ -567,7 +568,7 @@
     text-align: right;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .center_Lightweight_HealthElements_insert {
@@ -577,7 +578,7 @@
     color: #B05555;
     font-family: Khand;
     font-size: 0.9375rem;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .footer_rectangleText {
@@ -607,7 +608,7 @@
     color: #5E5E5E;
     font-family: Khand;
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .footer_rectangleAccept {
@@ -616,6 +617,9 @@
     left: 37.75rem;
     width: 2.625rem;
     height: 2.625rem;
+    border: 1px solid #363636;
+    background: #121212;
+
 }
 
 .footer_rectangleAccept_icon {
@@ -625,6 +629,9 @@
     width: 2.5rem;
     height: 2.5rem;
     background: url(./assets/imgs/Done.png), 50% / cover no-repeat;
+    transition: background-image 0.3s ease;
+    transition: top;
+    transition-duration: 0.35s;
 }
 
 .footer_rectangleDecline {
@@ -633,41 +640,155 @@
     left: 40.94rem;
     width: 2.625rem;
     height: 2.625rem;
+    border: 1px solid #363636;
+    background: #121212;
 }
 
 .footer_rectangleDecline_icon {
     position: absolute;
-    top: 0.12rem;
+    top: 0.32rem;
     left: 0.06rem;
     width: 2.5rem;
     height: 2.5rem;
     background: url(./assets/imgs/Multiply.png), 50% / cover no-repeat;
-}
-
-.animations{
-    border: 1px solid #363636;
-    background: #121212;
-}
-.animations:hover{
-    border: 1px solid #363636;
-    background: #FF2100;
-}
-.aiconA{
-    transition: top;
-    transition-duration: 0.35s;
-}
-.aiconA:hover{
-    top: 0.45rem;
-    background: url(./assets/imgs/Donered.png);
-}
-.aiconD{
+    transition: background-image 0.3s ease;
     transition: left;
     transition-duration: 0.35s;
 }
-.aiconD:hover{
-    left: 0.12rem;
-    background: url(./assets/imgs/Multiplyred.png);
+
+.center_runner:hover .center_runnerBorder_borderLeftRectangle, .center_runner:hover .center_runnerBorder_thinLine,
+.center_runner:hover .center_runnerBorder_thickLine, .center_runner:hover .center_runner_RectangleSpeedEmpty_insert,
+.center_runner:hover .center_runner_RectangleHealthEmpty_insert {
+    transition-duration: 0.3s;
+    background: #FF2100;
 }
-.changcolor:hover{
+
+.center_tank:hover .center_tankBorder_borderLeftRectangle, .center_tank:hover .center_tankBorder_thinLine,
+.center_tank:hover .center_tankBorder_thickLine, .center_tank:hover .center_tank_RectangleSpeedEmpty_insert,
+.center_tank:hover .center_tank_RectangleHealthEmpty_insert {
+    transition-duration: 0.3s;
+    background: #FF2100;
+}
+
+.center_Lightweight:hover .center_LightweightBorder_borderLeftRectangle, .center_Lightweight:hover .center_LightweightBorder_thinLine,
+.center_Lightweight:hover .center_LightweightBorder_thickLine, .center_Lightweight:hover .center_Lightweight_RectangleSpeedEmpty_insert,
+.center_Lightweight:hover .center_Lightweight_RectangleHealthEmpty_insert {
+    transition-duration: 0.3s;
+    background: #FF2100;
+}
+
+.center_runner:hover .center_runner_RectangleSpeedEmpty,
+.center_runner:hover .center_runner_RectangleHealthEmpty {
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.center_tank:hover .center_tank_RectangleSpeedEmpty,
+.center_tank:hover .center_tank_RectangleHealthEmpty {
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.center_Lightweight:hover .center_Lightweight_RectangleSpeedEmpty,
+.center_Lightweight:hover .center_Lightweight_RectangleHealthEmpty {
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.center_runner:hover .center_runner_Text, .center_runner:hover .center_runner_SpeedElements_insert,
+.center_runner:hover .center_runner_SpeedElements, .center_runner:hover .center_runner_HealthElements_insert,
+.center_runner:hover .center_runner_HealthElements {
+    transition-duration: 0.3s;
+    font-weight: 900;
+}
+
+.center_tank:hover .center_tank_Text, .center_tank:hover .center_tank_SpeedElements_insert,
+.center_tank:hover .center_tank_SpeedElements, .center_tank:hover .center_tank_HealthElements_insert,
+.center_tank:hover .center_tank_HealthElements {
+    transition-duration: 0.3s;
+    font-weight: 900;
+}
+
+.center_Lightweight:hover .center_Lightweight_Text, .center_Lightweight:hover .center_Lightweight_SpeedElements_insert,
+.center_Lightweight:hover .center_Lightweight_SpeedElements, .center_Lightweight:hover .center_Lightweight_HealthElements_insert,
+.center_Lightweight:hover .center_Lightweight_HealthElements {
+    transition-duration: 0.3s;
+    font-weight: 900;
+}
+
+.center_runner:hover .center_runnerBorder_borderIcon {
+    background: url(./assets/imgs/runner.png);
+}
+.center_tank:hover .center_tankBorder_borderIcon {
+    background: url(./assets/imgs/securityred.png);
+}
+.center_Lightweight:hover .center_LightweightBorder_borderIcon {
+    background: url(./assets/imgs/stormred.png);
+}
+.center_runner:hover .center_runner_Text {
+    transition-duration: 0.3s;
+    color: #FF2100;
+}
+
+.center_tank:hover .center_tank_Text {
+    transition-duration: 0.3s;
+    color: #FF2100;
+}
+
+.center_Lightweight:hover .center_Lightweight_Text {
+    transition-duration: 0.3s;
+    color: #FF2100;
+}
+
+.center_runner:hover .center_runnerBorder_border {
+    transition-duration: 0.3s;
+    border: 1px solid #FF2100;
+    background: #570A0A;
+}
+
+.center_tank:hover .center_tankBorder_border {
+    transition-duration: 0.3s;
+    border: 1px solid #FF2100;
+    background: #570A0A;
+}
+
+.center_Lightweight:hover .center_LightweightBorder_border {
+    transition-duration: 0.3s;
+    border: 1px solid #FF2100;
+    background: #570A0A;
+}
+
+.center_runner:hover .center_runnerBorder_borderBorderkKey {
+    transition-duration: 0.3s;
+    background: #931717;
+}
+
+.center_tank:hover .center_tankBorder_borderBorderkKey {
+    transition-duration: 0.3s;
+    background: #931717;
+}
+
+.center_Lightweight:hover .center_LightweightBorder_borderBorderkKey {
+    transition-duration: 0.3s;
+    background: #931717;
+}
+
+
+.footer_rectangleAccept:hover .footer_rectangleAccept_icon {
+    background: url(./assets/imgs/Donered.png);
+    top: 0.45rem;
+}
+
+.footer_rectangleAccept:hover {
+    background: #FF2100;
+}
+
+.footer_rectangleDecline:hover .footer_rectangleDecline_icon {
+    background: url(./assets/imgs/Multiplyred.png);
+    left: 0.32rem;
+}
+
+.footer_rectangleDecline:hover {
+    background: #FF2100;
+}
+
+.changcolor:hover {
     background: #FF2100;
 }

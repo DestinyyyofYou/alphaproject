@@ -121,8 +121,8 @@
 
 .center_runner_Border_borderBottomRight {
     position: absolute;
-    top: 5.65rem;
-    left: 5.85rem;
+    top: 5.95rem;
+    left: 5.95rem;
     width: 0.65625rem;
     height: 0.59375rem;
     stroke-width: 0.063rem;
@@ -297,16 +297,18 @@
     height: 0.59375rem;
     stroke-width: 0.063rem;
     stroke: #FFF;
+    background: url(./assets/imgs/angelTopLeft.png);
 }
 
 .center_tank_Border_borderBottomRight {
     position: absolute;
-    top: 5.65rem;
-    left: 5.85rem;
+    top: 5.95rem;
+    left: 5.95rem;
     width: 0.65625rem;
     height: 0.59375rem;
     stroke-width: 0.063rem;
     stroke: #FFF;
+    background: url(./assets/imgs/angelBottomRight.png);
 }
 
 .center_tank_Border_borderLeftRectangle {
@@ -478,16 +480,18 @@
     height: 0.59375rem;
     stroke-width: 0.063rem;
     stroke: #FFF;
+    background: url(./assets/imgs/angelTopLeft.png);
 }
 
 .center_Lightweight_Border_borderBottomRight {
     position: absolute;
-    top: 5.65rem;
-    left: 5.85rem;
+    top: 5.95rem;
+    left: 5.95rem;
     width: 0.65625rem;
     height: 0.59375rem;
     stroke-width: 0.063rem;
     stroke: #FFF;
+    background: url(./assets/imgs/angelBottomRight.png);
 }
 
 .center_Lightweight_Border_borderLeftRectangle {

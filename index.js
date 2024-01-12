@@ -3,63 +3,56 @@ const tankButton = document.querySelector(".center_tank");
 const lightButton = document.querySelector(".center_Lightweight");
 const acceptButton = document.querySelector(".footer_rectangleAccept");
 const declineButton = document.querySelector(".footer_rectangleDecline");
-var option;
+let option;
+
+
 const runnerHandler = () => {
-    $('.center_runner').hover(
-        function () {
-            $(this).addClass('hovered');
-        },
-        function () {
-            $(this).removeClass('hovered');
-        }
-    );
-    // đang lỗi phần event
-    $('.center_runner').one('click', function () {
-        $(this).toggleClass('clicked');
-        console.log('a');
-    })
-    $('.center_runner').one('keypress', (event) => {
-        if (event.key === 'r') {
-            $(this).toggleClass('clicked');
-        }
-    })
+    if (runnerButton.classList.contains("clicked")) {
+        runnerButton.classList.remove("clicked");
+    }
+    else {
+        runnerButton.classList.add("clicked");
+        tankButton.classList.remove("clicked");
+        lightButton.classList.remove("clicked");
+    }
 };
 const tankHandler = () => {
-    $('.center_tank').hover(
-        function () {
-            $(this).addClass('hovered');
-        },
-        function () {
-            $(this).removeClass('hovered');
-        }
-    );
-    $('.center_tank').one('click', function () {
-        $(this).toggleClass('clicked');
-    })
-    $('.center_tank').keyup(function (event) {
-        if (event.key === 't') {
-            $(this).toggleClass('clicked');
-        }
-    });
+    if (tankButton.classList.contains("clicked")) {
+        tankButton.classList.remove("clicked");
+    }
+    else {
+        tankButton.classList.add("clicked");
+        runnerButton.classList.remove("clicked");
+        lightButton.classList.remove("clicked");
+    }
 };
 const lightHandler = () => {
-    $('.center_Lightweight').hover(
-        function () {
-            $(this).addClass('hovered');
-        },
-        function () {
-            $(this).removeClass('hovered');
-        }
-    );
-    $('.center_Lightweight').one('click', function () {
-        $(this).toggleClass('clicked');
-    })
-    $('.center_Lightweight').keyup(function (event) {
-        if (event.key === 'l') {
-            $(this).toggleClass('clicked');
-        }
-    });
+    if (lightButton.classList.contains("clicked")) {
+        lightButton.classList.remove("clicked");
+    }
+    else {
+        lightButton.classList.add("clicked");
+        runnerButton.classList.remove("clicked");
+        tankButton.classList.remove("clicked");
+    }
 };
+const declineButtonHandler = () => {
+    runnerButton.classList.remove("clicked");
+    tankButton.classList.remove("clicked");
+    lightButton.classList.remove("clicked");
+};
+const acceptButtonHandler = () =>{
+    if(runnerButton.classList.contains("clicked")){
+        option = 'Runner';
+    }
+    else if(tankButton.classList.contains("clicked")){
+        option = 'Tank';
+    }
+    else if(lightButton.classList.contains("clicked")){
+        option = 'Lightweight';
+    }
+    alert(option);
+}
 runnerButton.addEventListener("click", () => {
     runnerHandler();
 });
@@ -73,11 +66,11 @@ lightButton.addEventListener("click", () => {
 });
 
 acceptButton.addEventListener("click", () => {
-    alert("Click accept");
+    acceptButtonHandler();
 });
 
 declineButton.addEventListener("click", () => {
-    alert("Click decline");
+    declineButtonHandler();
 });
 
 window.addEventListener("keyup", (event) => {

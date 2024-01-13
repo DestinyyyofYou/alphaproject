@@ -177,8 +177,8 @@
 }
 
 .center_runner_RectangleSpeedEmpty_insert {
-    width: 6.125rem;
-    height: 0.5625rem;
+    width: 100%;
+    height: 100%;
     background: #494949;
 }
 
@@ -192,7 +192,7 @@
 }
 
 .center_runner_RectangleHealthEmpty_insert {
-    width: 6.125rem;
+    width: 0;
     height: 0.5625rem;
     background: #494949;
 }

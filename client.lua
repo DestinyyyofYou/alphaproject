@@ -1,3 +1,14 @@
+function setClassBoost(class)
+    if class == "runner" then
+        SetRunSprintMultiplierForPlayer(PlayerId(), 1.49)
+    elseif class == "tank" then
+        SetEntityMaxHealth(PlayerPedId(), 400)
+    elseif class == "light" then
+        SetRunSprintMultiplierForPlayer(PlayerId(), 1.24)
+        SetEntityMaxHealth(PlayerPedId(), 300)
+    end
+    ESX.ShowNotification("You got class boost!")
+end
 RegisterNUICallback("escape", function()
     SetNuiFocus(false, false)
 end)
@@ -7,13 +18,9 @@ RegisterNUICallback("accept", function(data)
     if GetEntityHealth(PlayerPedId()) > 200 then
         SetEntityHealth(PlayerPedId(), 200)
     end
-    if data.option == "runner" then
-        SetRunSprintMultiplierForPlayer(PlayerId(), 1.49)
-    elseif data.option == "tank" then
-        SetEntityMaxHealth(PlayerPedId(), 400)
-    elseif data.option == "light" then
-        SetRunSprintMultiplierForPlayer(PlayerId(), 1.24)
-        SetEntityMaxHealth(PlayerPedId(), 300)
+    if data.option then
+        TriggerServerEvent("kzo_alphaclasses:saveOption", data.option)
+        setClassBoost(data.option)
     end
 end)
 Citizen.CreateThread(function()
@@ -39,4 +46,12 @@ Citizen.CreateThread(function()
         }},
         distance = 2
     })
+end)
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function()
+    ESX.TriggerServerCallback("kzo_alphaclasses:getClass", function(class)
+        if class then
+            setClassBoost(class)
+        end
+    end)
 end)

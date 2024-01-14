@@ -86,7 +86,7 @@ declineButton.addEventListener("click", () => {
   declineButtonHandler();
 });
 
-window.addEventListener("keyup", (event) => {
+document.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "r":
       runnerHandler();

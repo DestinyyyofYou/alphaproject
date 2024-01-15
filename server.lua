@@ -2,7 +2,7 @@ local itemRequire = "bread" -- "itemname" or false to disable
 
 local moneyRequire = 5000 -- moneyamount or false to disable
 
-RegisterNetEvent("kzo_alphaclasses:saveOption", function(option)
+ESX.RegisterServerCallback("kzo_alphaclasses:saveOption", function(source, cb, option)
     local xPlayer = ESX.GetPlayerFromId(source)
     local valid = false
     if moneyRequire and not itemRequire then
@@ -28,6 +28,7 @@ RegisterNetEvent("kzo_alphaclasses:saveOption", function(option)
             xPlayer.showNotification("You do not have an item or money!")
         end
     end
+    cb(valid)
     if valid then
         MySQL.Async.execute("DELETE FROM kzo_alphaclasses WHERE identifier = @identifier", {
             ["@identifier"] = xPlayer.identifier

@@ -19,8 +19,11 @@ RegisterNUICallback("accept", function(data)
         SetEntityHealth(PlayerPedId(), 200)
     end
     if data.option then
-        TriggerServerEvent("kzo_alphaclasses:saveOption", data.option)
-        setClassBoost(data.option)
+        ESX.TriggerServerCallback("kzo_alphaclasses:saveOption", function(save)
+             if save then
+                setClassBoost(data.option)
+             end
+        end, data.option)
     end
 end)
 Citizen.CreateThread(function()

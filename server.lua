@@ -1,48 +1,49 @@
+QBCore = exports["qb-core"]:GetCoreObject()
 local itemRequire = "bread" -- "itemname" or false to disable
 
 local moneyRequire = 5000 -- moneyamount or false to disable
 
-ESX.RegisterServerCallback("kzo_alphaclasses:saveOption", function(source, cb, option)
-    local xPlayer = ESX.GetPlayerFromId(source)
+QBCore.Functions.CreateCallback("kzo_alphaclasses:saveOption", function(source, cb, option)
+    local xPlayer = QBCore.Functions.GetPlayer(source)
     local valid = false
     if moneyRequire and not itemRequire then
-        if xPlayer.getMoney() >= moneyRequire then
-            xPlayer.removeAccountMoney("money", moneyRequire)
+        if xPlayer.PlayerData.money.cash >= moneyRequire then
+            xPlayer.Functions.RemoveMoney("cash", moneyRequire)
             valid = true
         else
-            xPlayer.showNotification("You do not have enough money!")
+            TriggerClientEvent("QBCore:Notify", source, "You do not have enough money!")
         end
     elseif itemRequire and not moneyRequire then
-        if xPlayer.getInventoryItem(itemRequire).count >= 1 then
-            xPlayer.removeInventoryItem(itemRequire, 1)
+        if xPlayer.Functions.GetItemByName(itemRequire).amount >= 1 then
+           xPlayer.Functions.RemoveItem(itemRequire, 1)
             valid = true
         else
-            xPlayer.showNotification("You do not have an item!")
+            TriggerClientEvent("QBCore:Notify", source,"You do not have an item!")
         end
     else
-        if xPlayer.getMoney() >= moneyRequire and xPlayer.getInventoryItem(itemRequire).count >= 1 then
-            xPlayer.removeAccountMoney("money", moneyRequire)
-            xPlayer.removeInventoryItem(itemRequire, 1)
+        if xPlayer.PlayerData.money.cash >= moneyRequire and xPlayer.Functions.GetItemByName(itemRequire).amount >= 1 then
+            xPlayer.Functions.RemoveMoney("cash", moneyRequire)
+           xPlayer.Functions.RemoveItem(itemRequire, 1)
             valid = true
         else
-            xPlayer.showNotification("You do not have an item or money!")
+            TriggerClientEvent("QBCore:Notify", source,"You do not have an item or money!")
         end
     end
     cb(valid)
     if valid then
         MySQL.Async.execute("DELETE FROM kzo_alphaclasses WHERE identifier = @identifier", {
-            ["@identifier"] = xPlayer.identifier
+            ["@identifier"] = xPlayer.PlayerData.citizenid
         })
         MySQL.Async.execute("INSERT INTO kzo_alphaclasses (identifier, option) VALUES (@identifier, @option)", {
-            ["@identifier"] = xPlayer.identifier,
+            ["@identifier"] = xPlayer.PlayerData.citizenid,
             ["@option"] = option
         })
     end
 end)
-ESX.RegisterServerCallback("kzo_alphaclasses:getClass", function(source, cb)
-    local xPlayer = ESX.GetPlayerFromId(source)
+QBCore.Functions.CreateCallback("kzo_alphaclasses:getClass", function(source, cb)
+    local xPlayer = QBCore.Functions.GetPlayer(source)
     MySQL.Async.fetchAll('SELECT * FROM kzo_alphaclasses WHERE identifier = @identifier', {
-        ["@identifier"] = xPlayer.identifier
+        ["@identifier"] = xPlayer.PlayerData.citizenid
     }, function(data)
         if data[1] then
             cb(data[1].option)

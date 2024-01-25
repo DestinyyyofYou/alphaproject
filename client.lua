@@ -7,7 +7,7 @@ function setClassBoost(class)
         SetRunSprintMultiplierForPlayer(PlayerId(), 1.24)
         SetEntityMaxHealth(PlayerPedId(), 300)
     end
-    ESX.ShowNotification("You got class boost!")
+    QBCore.Functions.Notify("You got class boost!")
 end
 RegisterNUICallback("escape", function()
     SetNuiFocus(false, false)
@@ -19,7 +19,7 @@ RegisterNUICallback("accept", function(data)
         SetEntityHealth(PlayerPedId(), 200)
     end
     if data.option then
-        ESX.TriggerServerCallback("kzo_alphaclasses:saveOption", function(save)
+        QBCore.Functions.TriggerCallback("kzo_alphaclasses:saveOption", function(save)
              if save then
                 setClassBoost(data.option)
              end
@@ -50,9 +50,9 @@ Citizen.CreateThread(function()
         distance = 2
     })
 end)
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function()
-    ESX.TriggerServerCallback("kzo_alphaclasses:getClass", function(class)
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    Citizen.Wait(10000)
+    QBCore.Functions.TriggerCallback("kzo_alphaclasses:getClass", function(class)
         if class then
             setClassBoost(class)
         end
